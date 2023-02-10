@@ -1,0 +1,30 @@
+<html><head><title>Theme</title></head><body id="l2">
+    <script>
+        var a=["#000000","#ffffff"];
+   function t(){
+        let currentDate = new Date();
+        document.getElementById("tme").innerHTML=currentDate.getHours() + ":" + currentDate.getMinutes() + ":" + currentDate.getSeconds();
+        document.getElementById("date").innerHTML=currentDate.getDate()+"/"+currentDate.getMonth()+1+"/"+currentDate.getFullYear();
+        } 
+    function change()
+    {
+        document.getElementById("l2").style.backgroundColor=a[0];
+        document.getElementById("l2").style.color=a[1];
+    setInterval(t,1000);    }
+        
+    function toggle()
+    {
+        var c=a[0];
+        a[0]=a[1];
+        a[1]=c;
+change();
+
+    }
+    
+    </script>
+    <br>
+  <Button onclick="toggle()" id="bt">Theme</Button></body>
+    <div style="margin-top: 30%; font-size: 120px;font-weight: bold; text-align: center;"id="tme"></div><br>
+<div style="margin-top:30px;font-size: 80px; text-align: center;"id="date"></div>
+  
+</div></html>
